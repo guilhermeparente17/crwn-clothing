@@ -23,7 +23,7 @@ class SignUp extends React.Component {
         event.preventDefault();
 
         const { displayName, email, password, confirmPassword } = this.state;
-        console.log(displayName)
+
         if (password !== confirmPassword) {
             alert("passwords don't match");
             return;
@@ -50,7 +50,6 @@ class SignUp extends React.Component {
 
     handleChange = event => {
         const { name, value } = event.target;
-
         this.setState({ [name]: value });
     };
 
@@ -94,6 +93,7 @@ class SignUp extends React.Component {
                         required
                     />
                     <CustomButtom type='submit'>SIGN UP</CustomButtom>
+
                 </form>
             </div>
         );
